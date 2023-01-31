@@ -1,0 +1,37 @@
+/* reset  */
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dt,
+dl {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* general */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+  background: #faf6ed;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}

@@ -58,3 +58,18 @@ body {
   font-size: 0.875rem;
   letter-spacing: 0.1rem;
 }
+
+/* main */
+
+.grid-section {
+  grid-column: 2 / 4;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  grid-gap: 120px;
+  margin-bottom: 4rem;
+}
+
+/* main title */

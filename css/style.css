@@ -167,3 +167,29 @@ body {
   margin-bottom: 0.5rem;
   margin-left: 30px;
 }
+
+/* contact */
+
+.map {
+  grid-column: 2;
+}
+
+.data {
+  grid-column: 3;
+}
+
+.data li {
+  margin-bottom: 1rem;
+  font-family: Helvetica, Arial;
+}
+
+.data li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+/* copyright - footer */

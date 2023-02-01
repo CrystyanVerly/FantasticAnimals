@@ -36,7 +36,8 @@ body {
 
 .menu-nav {
   grid-column: 3 / 5;
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background: #fb5;
 }
 
@@ -204,4 +205,36 @@ body {
   padding: 20px;
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
+}
+
+/* responsive */
+
+@media screen and (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .menu-nav,
+  .grid-section,
+  .copy {
+    grid-column: 1;
+  }
+  .menu-nav,
+  .copy {
+    margin-top: 0;
+  }
+  #animals {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+  .grid-section h1 {
+    font-size: 3rem;
+  }
+  .list-animals {
+    grid-column: 1;
+  }
+  .faq-list,
+  .data,
+  .map {
+    grid-column: 1 / 3;
+  }
 }

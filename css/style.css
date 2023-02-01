@@ -138,3 +138,32 @@ body {
 .list-animals::-webkit-scrollbar-track {
   background: #faf6ed;
 }
+
+/* FAQ */
+
+.faq-list {
+  grid-column: 2 / 4;
+}
+
+.faq-list dt {
+  font-family: "IMB Plex Mono", monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #e54;
+}
+
+.faq-list dt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.faq-list dd {
+  font-family: Helvetica, Arial;
+  margin-bottom: 0.5rem;
+  margin-left: 30px;
+}

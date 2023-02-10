@@ -41,3 +41,34 @@ function initAccordionList() {
   }
 }
 initAccordionList();
+
+// smooth inner link
+
+function initSmoothScroll() {
+  const _innerLink = document.querySelectorAll(".js-menu a[href^='#']");
+
+  function scrollToSection(e) {
+    e.preventDefault();
+
+    const _href = e.currentTarget.getAttribute("href");
+    const _section = document.querySelector(_href);
+
+    _section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    // const _sectionTop = _section.offsetTop;
+    // window.scrollTo(0, _sectionTop);
+    // ou
+    // window.scrollTo({
+    //   top: _sectionTop,
+    //   behavior: "smooth",
+    // });
+  }
+
+  _innerLink.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+}
+initSmoothScroll();

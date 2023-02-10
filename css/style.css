@@ -156,6 +156,7 @@ body {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   color: #e54;
+  cursor: pointer;
 }
 
 .faq-list dt::before {

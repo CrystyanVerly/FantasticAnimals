@@ -12,13 +12,13 @@
   <!-- style -->
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <!-- script -->
-  <script src="./js/script.js" defer></script>
+  <script type="module" src="./js/script.js" defer></script>
   <script>document.documentElement.className += " js";</script>
   <title>Animais Fantásticos</title>
 </head>
 
 <body>
-  <nav class="menu-nav js-menu">
+  <nav class="menu-nav" data-menu="link">
     <ul>
       <li><a href="#animals">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
@@ -28,9 +28,9 @@
       </li>
     </ul>
   </nav>
-  <section class="grid-section animals js-scroll" id="animals">
+  <section class="grid-section animals" data-anima="scroll" id="animals">
     <h1 class="title">Animais Fantásticos</h1>
-    <ul class="list-animals js-tabMenu">
+    <ul class="list-animals" data-tab="menu">
       <li><img src="./img/imagem1.jpg" alt="fox" /></li>
       <li><img src="./img/imagem2.jpg" alt="squirrel" /></li>
       <li><img src="./img/imagem3.jpg" alt="bear" /></li>
@@ -38,8 +38,8 @@
       <li><img src="./img/imagem5.jpg" alt="monkey" /></li>
       <li><img src="./img/imagem6.jpg" alt="lion" /></li>
     </ul>
-    <div class="description-animals js-tabContent">
-      <section class="fox mini-section">
+    <div class="description-animals" data-tab="content">
+      <section data-anima="show-right">
         <h2>Raposa</h2>
         <p>
           As raposas são animais mamíferos e onívoros pertencentes à família
@@ -60,7 +60,7 @@
           semelhantes às pupilas verticais dos felídeos.
         </p>
       </section>
-      <section class="squirrel mini-section">
+      <section data-anima="show-down">
         <h2>Esquilo</h2>
         <p>
           O esquilo (Sciurus vulgaris) é um mamífero pertencente à família
@@ -83,7 +83,7 @@
           pelos troncos.
         </p>
       </section>
-      <section class="bear mini-section">
+      <section data-anima="show-right">
         <h2>Urso</h2>
         <p>
           Urso é a denominação utilizada para as espécies pertencentes à
@@ -104,7 +104,7 @@
           adaptados principalmente para uma dieta baseada em vegetais.
         </p>
       </section>
-      <section class="wolf mini-section">
+      <section data-anima="show-down">
         <h2>Lobo</h2>
         <p>
           O lobo é um animal carnívoro pertencente à mesma família dos cães
@@ -130,7 +130,7 @@
           anteriores.
         </p>
       </section>
-      <section class="monkey mini-section">
+      <section data-anima="show-right"">
         <h2>Macaco</h2>
         <p>
           Macacos são animais mamíferos que fazem parte do grupo dos primatas.
@@ -149,7 +149,7 @@
           contribui para a redução da população de macacos.
         </p>
       </section>
-      <section class="lion mini-section">
+      <section data-anima=" show-down">
         <h2>Leão</h2>
         <p>
           O leão é um mamífero pertencente à ordem Carnivora e família
@@ -172,9 +172,9 @@
       </section>
     </div>
   </section>
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" data-anima="scroll" id="faq">
     <h1 class="title">FAQ</h1>
-    <dl class="faq-list js-accordion">
+    <dl class="faq-list js-accordion" data-anima="accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</dd>
       <dt>Eles são fantásticos?</dt>
@@ -185,7 +185,7 @@
       <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
     </dl>
   </section>
-  <section class="grid-section contact js-scroll" id="contact">
+  <section class="grid-section contact" data-anima="scroll" id="contact">
     <h1 class="title">Contato</h1>
     <div class="map">
       <img src="./img/mapa.png" alt="map location" />

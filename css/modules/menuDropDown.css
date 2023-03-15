@@ -6,7 +6,8 @@
   display: none;
 }
 
-[data-dropdown]:hover .dropdown-menu {
+[data-dropdown]:hover .dropdown-menu,
+[data-dropdown].active .dropdown-menu {
   display: block;
   animation: show-up 0.3s forwards;
 }

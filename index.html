@@ -1,231 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <!-- script -->
+    <script type="module" src="./js/script.js" defer></script>
+    <script>
+      document.documentElement.className += " js";
+    </script>
+    <title>Animais Fantásticos</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet" />
-  <!-- style -->
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  <!-- script -->
-  <script type="module" src="./js/script.js" defer></script>
-  <script>document.documentElement.className += " js";</script>
-  <title>Animais Fantásticos</title>
-</head>
-
-<body>
-  <div class="grid-container">
-    <nav class="menu-nav" data-menu="link">
-      <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
-      <ul data-menu="list" id="menu"> 
-        <li><a href="#animals">Animais</a></li>
-        <li data-dropdown>
-          <a href="about.html">Sobre</a>
-          <ul class="dropdown-menu">
-            <li><a href="empresa.html">Empresa</a></li>
-            <li><a href="equipe.html">Equipe</a></li>
-            <li><a href="socios.html">Sócios</a></li>
-            <li><a href="investidores.html">Investidores</a></li>
-          </ul>
-        </li>
-        <li><a href="#faq">Faq</a></li>
-        <li><a href="#contact">Contato</a></li>
-        <li>
-          <a data-modal="open" href="login.html">Login</a>
-        </li>
-      </ul>
-    </nav>
-    <section class="grid-section animals" data-anima="scroll" id="animals">
-      <h1 class="title">Animais Fantásticos</h1>
-      <ul class="list-animals" data-tab="menu">
-        <li><img src="./img/imagem1.jpg" alt="fox" /></li>
-        <li><img src="./img/imagem2.jpg" alt="squirrel" /></li>
-        <li><img src="./img/imagem3.jpg" alt="bear" /></li>
-        <li><img src="./img/imagem4.jpg" alt="wolf" /></li>
-        <li><img src="./img/imagem5.jpg" alt="monkey" /></li>
-        <li><img src="./img/imagem6.jpg" alt="lion" /></li>
-      </ul>
-      <div class="description-animals" data-tab="content">
-        <section data-anima="show-right">
-          <h2>Raposa</h2>
-          <p>
-            As raposas são animais mamíferos e onívoros pertencentes à família
-            Canidae. São vulpídeos de porte médio, caracterizados por um focinho
-            comprido e uma cauda longa e peluda..
-          </p>
-          <p>
-            Também apresentam como particularidade suas pupilas ovais,
-            semelhantes às pupilas verticais dos felídeos.
-          </p>
-          <p>
-            De cerca de 40 espécies reconhecidas como raposas, somente 12
-            pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a
-            raposa vermelha é a mais comum.
-          </p>
-          <p>
-            Também apresentam como particularidade suas pupilas ovais,
-            semelhantes às pupilas verticais dos felídeos.
-          </p>
-        </section>
-        <section data-anima="show-down">
-          <h2>Esquilo</h2>
-          <p>
-            O esquilo (Sciurus vulgaris) é um mamífero pertencente à família
-            Sciudidae e à ordem rodentia. Sua família comprende os esquilos
-            arborícolas, terrestres, voadores e as marmotas, entre outros.
-          </p>
-          <p>
-            O esquilo (Sciurus vulgaris) é um mamífero pertencente à família
-            Sciudidae e à ordem rodentia. Sua família comprende os esquilos
-            arborícolas, terrestres, voadores e as marmotas, entre outros.
-          </p>
-          <p>
-            O tamanho deste animal é variável, o menor deles é o esquilo pigmeu
-            africano, que mede 13 cm de comprimento. Os maiores são os esquilos
-            gigantes da Ásia, seu comprimento pode chegar a 90 cm.
-          </p>
-          <p>
-            Trata-se de um animal de hábitos diurnos e se desloca com incrível
-            agilidade pela copas das árvores, bem coma para subir ou descer
-            pelos troncos.
-          </p>
-        </section>
-        <section data-anima="show-right">
-          <h2>Urso</h2>
-          <p>
-            Urso é a denominação utilizada para as espécies pertencentes à
-            família Ursidae, uma das famílias mais estudadas e mais ameaçadas
-            entre os animais carnívoros.
-          </p>
-          <p>
-            Atualmente, existem oito espécies deles, essas apresentam algumas
-            características em comum mas também suas peculiaridades.
-          </p>
-          <p>
-            Os ursos são cobertos por pêlos longos, grossos e ásperos que podem
-            ser marrons, pretos, brancos ou malhados. Seus corpos são muito
-            volumosos e robustos e são acompanhados por membros curtos.
-          </p>
-          <p>
-            Ao contrário de outros carnívoros, esses mamíferos têm dentes
-            adaptados principalmente para uma dieta baseada em vegetais.
-          </p>
-        </section>
-        <section data-anima="show-down">
-          <h2>Lobo</h2>
-          <p>
-            O lobo é um animal carnívoro pertencente à mesma família dos cães
-            domésticos. O termo lobo geralmente é utilizado para fazer
-            referência ao lobo-cinzento, que apresenta nome científico Canis
-            lupus.
-          </p>
-          <p>
-            Apesar da denominação de lobo-cinzento, a coloração do pelo pode
-            variar, sendo alguns indivíduos, por exemplo, completamente brancos.
-            Os lobos são animais relativamente grandes, podendo atingir mais de
-            1 metro no comprimento total do corpo.
-          </p>
-          <p>
-            Os lobos-cinzentos são animais carnívoros, alimentando-se, portanto,
-            de outros animais. Sua dieta geralmente inclui alces, veados,
-            caribus e javalis.
-          </p>
-          <p>
-            Os lobos-cinzentos são encontrados em grupos estruturados que
-            recebem o nome de alcateia. Uma alcateia é, geralmente, composta
-            pelos progenitores e pelos seus filhotes daquele ano e/ou de anos
-            anteriores.
-          </p>
-        </section>
-        <section data-anima="show-right"">
-          <h2>Macaco</h2>
-          <p>
-            Macacos são animais mamíferos que fazem parte do grupo dos primatas.
-          </p>
-          <p>
-            Os macacos pertencem à classe Mammalia, e, como todo mamífero,
-            apresentam o corpo recoberto por pelos e possuem glândulas mamárias.
-          </p>
-          <p>
-            Atualmente, em todo o planeta, várias espécies de macaco sofrem com
-            a ação do homem. Um dos principais problemas enfrentados por esses
-            animais é a fragmentação de habitat.
-          </p>
-          <p>
-            Além da destruição de habitat, a caça, em várias regiões do planeta,
-            contribui para a redução da população de macacos.
-          </p>
-        </section>
-        <section data-anima=" show-down">
-          <h2>Leão</h2>
-          <p>
-            O leão é um mamífero pertencente à ordem Carnivora e família
-            Felidae, sendo conhecido como “rei das selvas.
-          </p>
-          <p>
-            Apesar de serem admirados por sua força, atualmente as populações de
-            leões estão em declínio, sendo a espécie classificada como
-            vulnerável pela IUCN.
-          </p>
-          <p>
-            Segundo maior felino do mundo, o leão perde em tamanho apenas para o
-            tigre. Os leões apresentam de 1,37 a 2 m de tamanho (corpo e
-            cabeça), e sua cauda pode atingir até 100 cm de comprimento.
-          </p>
-          <p>
-            Os leões-africanos são encontrados vivendo em planícies ou savanas,
-            habitando, atualmente, o leste e sul da África.
-          </p>
-        </section>
-      </div>
-    </section>
-    <section class="grid-section faq" data-anima="scroll" id="faq">
-      <h1 class="title">FAQ</h1>
-      <dl class="faq-list js-accordion" data-anima="accordion">
-        <dt>Qual a idade dos animais?</dt>
-        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</dd>
-        <dt>Eles são fantásticos?</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
-        <dt>Qual a diferença?</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
-        <dt>Como proteger?</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
-      </dl>
-    </section>
-    <section class="grid-section contact" data-anima="scroll" id="contact">
-      <h1 class="title">Contato</h1>
-      <div class="map" data-tooltip aria-label="Endereço próximo ao estacionamento">
-        <img src="./img/mapa.png" alt="map location" />
-      </div>
-      <ul class="data">
-        <li>crystyanknappverly@gmail.com</li>
-        <li>+55 21 99999-9999</li>
-        <li>Rua Logo Ali, 42</li>
-        <li>Rio de Janeiro | SG</li>
-      </ul>
-    </section>
-    <footer class="copy">
-      <p>&copy Alguns direitos reservados.</p>
-    </footer>
-  </div>
-
-  <!-- modal -->
-  <section class="modal-container" data-modal="container">
-    <div class="modal">
-      <button class="close" data-modal="close">X</button>
-      <form action="">
-        <label for="email">E-mail</label>
-        <input type="text" for="email" id="email">
-        <label for="email">Password</label>
-        <input type="text" for="password" id="password">
-        <button type="submit">Login</button>
-      </form>
+  <body>
+    <div class="grid-container">
+      <nav class="menu-nav" data-menu="link">
+        <button data-menu="button" aria-expanded="false" aria-controls="menu">
+          Menu
+        </button>
+        <ul data-menu="list" id="menu">
+          <li><a href="#animals">Animais</a></li>
+          <li data-dropdown>
+            <a href="about.html">Sobre</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">Empresa</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="socios.html">Sócios</a></li>
+              <li><a href="investidores.html">Investidores</a></li>
+            </ul>
+          </li>
+          <li><a href="#faq">Faq</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li>
+            <a data-modal="open" href="login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="grid-section animals" data-anima="scroll" id="animals">
+        <h1 class="title">Animais Fantásticos</h1>
+        <ul class="list-animals" data-tab="menu">
+          <li><img src="./img/imagem1.jpg" alt="fox" /></li>
+          <li><img src="./img/imagem2.jpg" alt="squirrel" /></li>
+          <li><img src="./img/imagem3.jpg" alt="bear" /></li>
+          <li><img src="./img/imagem4.jpg" alt="wolf" /></li>
+          <li><img src="./img/imagem5.jpg" alt="monkey" /></li>
+          <li><img src="./img/imagem6.jpg" alt="lion" /></li>
+        </ul>
+        <div class="description-animals" data-tab="content">
+          <section data-anima="show-right">
+            <h2>Raposa</h2>
+            <p>
+              As raposas são animais mamíferos e onívoros pertencentes à família
+              Canidae. São vulpídeos de porte médio, caracterizados por um
+              focinho comprido e uma cauda longa e peluda..
+            </p>
+            <p>
+              Também apresentam como particularidade suas pupilas ovais,
+              semelhantes às pupilas verticais dos felídeos.
+            </p>
+            <p>
+              De cerca de 40 espécies reconhecidas como raposas, somente 12
+              pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a
+              raposa vermelha é a mais comum.
+            </p>
+            <p>
+              Também apresentam como particularidade suas pupilas ovais,
+              semelhantes às pupilas verticais dos felídeos.
+            </p>
+          </section>
+          <section data-anima="show-down">
+            <h2>Esquilo</h2>
+            <p>
+              O esquilo (Sciurus vulgaris) é um mamífero pertencente à família
+              Sciudidae e à ordem rodentia. Sua família comprende os esquilos
+              arborícolas, terrestres, voadores e as marmotas, entre outros.
+            </p>
+            <p>
+              O esquilo (Sciurus vulgaris) é um mamífero pertencente à família
+              Sciudidae e à ordem rodentia. Sua família comprende os esquilos
+              arborícolas, terrestres, voadores e as marmotas, entre outros.
+            </p>
+            <p>
+              O tamanho deste animal é variável, o menor deles é o esquilo
+              pigmeu africano, que mede 13 cm de comprimento. Os maiores são os
+              esquilos gigantes da Ásia, seu comprimento pode chegar a 90 cm.
+            </p>
+            <p>
+              Trata-se de um animal de hábitos diurnos e se desloca com incrível
+              agilidade pela copas das árvores, bem coma para subir ou descer
+              pelos troncos.
+            </p>
+          </section>
+          <section data-anima="show-right">
+            <h2>Urso</h2>
+            <p>
+              Urso é a denominação utilizada para as espécies pertencentes à
+              família Ursidae, uma das famílias mais estudadas e mais ameaçadas
+              entre os animais carnívoros.
+            </p>
+            <p>
+              Atualmente, existem oito espécies deles, essas apresentam algumas
+              características em comum mas também suas peculiaridades.
+            </p>
+            <p>
+              Os ursos são cobertos por pêlos longos, grossos e ásperos que
+              podem ser marrons, pretos, brancos ou malhados. Seus corpos são
+              muito volumosos e robustos e são acompanhados por membros curtos.
+            </p>
+            <p>
+              Ao contrário de outros carnívoros, esses mamíferos têm dentes
+              adaptados principalmente para uma dieta baseada em vegetais.
+            </p>
+          </section>
+          <section data-anima="show-down">
+            <h2>Lobo</h2>
+            <p>
+              O lobo é um animal carnívoro pertencente à mesma família dos cães
+              domésticos. O termo lobo geralmente é utilizado para fazer
+              referência ao lobo-cinzento, que apresenta nome científico Canis
+              lupus.
+            </p>
+            <p>
+              Apesar da denominação de lobo-cinzento, a coloração do pelo pode
+              variar, sendo alguns indivíduos, por exemplo, completamente
+              brancos. Os lobos são animais relativamente grandes, podendo
+              atingir mais de 1 metro no comprimento total do corpo.
+            </p>
+            <p>
+              Os lobos-cinzentos são animais carnívoros, alimentando-se,
+              portanto, de outros animais. Sua dieta geralmente inclui alces,
+              veados, caribus e javalis.
+            </p>
+            <p>
+              Os lobos-cinzentos são encontrados em grupos estruturados que
+              recebem o nome de alcateia. Uma alcateia é, geralmente, composta
+              pelos progenitores e pelos seus filhotes daquele ano e/ou de anos
+              anteriores.
+            </p>
+          </section>
+          <section data-anima="show-right">
+            <h2>Macaco</h2>
+            <p>
+              Macacos são animais mamíferos que fazem parte do grupo dos
+              primatas.
+            </p>
+            <p>
+              Os macacos pertencem à classe Mammalia, e, como todo mamífero,
+              apresentam o corpo recoberto por pelos e possuem glândulas
+              mamárias.
+            </p>
+            <p>
+              Atualmente, em todo o planeta, várias espécies de macaco sofrem
+              com a ação do homem. Um dos principais problemas enfrentados por
+              esses animais é a fragmentação de habitat.
+            </p>
+            <p>
+              Além da destruição de habitat, a caça, em várias regiões do
+              planeta, contribui para a redução da população de macacos.
+            </p>
+          </section>
+          <section data-anima=" show-down">
+            <h2>Leão</h2>
+            <p>
+              O leão é um mamífero pertencente à ordem Carnivora e família
+              Felidae, sendo conhecido como “rei das selvas.
+            </p>
+            <p>
+              Apesar de serem admirados por sua força, atualmente as populações
+              de leões estão em declínio, sendo a espécie classificada como
+              vulnerável pela IUCN.
+            </p>
+            <p>
+              Segundo maior felino do mundo, o leão perde em tamanho apenas para
+              o tigre. Os leões apresentam de 1,37 a 2 m de tamanho (corpo e
+              cabeça), e sua cauda pode atingir até 100 cm de comprimento.
+            </p>
+            <p>
+              Os leões-africanos são encontrados vivendo em planícies ou
+              savanas, habitando, atualmente, o leste e sul da África.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="grid-section faq" data-anima="scroll" id="faq">
+        <h1 class="title">FAQ</h1>
+        <dl class="faq-list js-accordion" data-anima="accordion">
+          <dt>Qual a idade dos animais?</dt>
+          <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</dd>
+          <dt>Eles são fantásticos?</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+          <dt>Qual a diferença?</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+          <dt>Como proteger?</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+        </dl>
+      </section>
+      <section class="grid-section numbers" data-anima="scroll">
+        <h1 class="title">Números</h1>
+        <div class="grid-numbers">
+          <div class="animal-number">
+            <h3>Raposa</h3>
+            <span data-num>4874</span>
+          </div>
+          <div class="animal-number">
+            <h3>Esquilo</h3>
+            <span data-num>5374</span>
+          </div>
+          <div class="animal-number">
+            <h3>Urso</h3>
+            <span data-num>12340</span>
+          </div>
+          <div class="animal-number">
+            <h3>Lobo</h3>
+            <span data-num>203</span>
+          </div>
+          <div class="animal-number">
+            <h3>Macaco</h3>
+            <span data-num>876</span>
+          </div>
+          <div class="animal-number">
+            <h3>Leão</h3>
+            <span data-num>7534</span>
+          </div>
+        </div>
+      </section>
+      <section class="grid-section contact" data-anima="scroll" id="contact">
+        <h1 class="title">Contato</h1>
+        <div
+          class="map"
+          data-tooltip
+          aria-label="Endereço próximo ao estacionamento"
+        >
+          <img src="./img/mapa.png" alt="map location" />
+        </div>
+        <ul class="data">
+          <li>crystyanknappverly@gmail.com</li>
+          <li>+55 21 99999-9999</li>
+          <li>Rua Logo Ali, 42</li>
+          <li>Rio de Janeiro | SG</li>
+        </ul>
+      </section>
+      <footer class="copy">
+        <p>&copy Alguns direitos reservados.</p>
+      </footer>
     </div>
-  </section>
-</body>
 
+    <!-- modal -->
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button class="close" data-modal="close">X</button>
+        <form action="">
+          <label for="email">E-mail</label>
+          <input type="text" for="email" id="email" />
+          <label for="email">Password</label>
+          <input type="text" for="password" id="password" />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>

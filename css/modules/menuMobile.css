@@ -39,15 +39,15 @@
     width: 160px;
     top: 0;
     padding: 60px 0 20px 0;
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
     z-index: 200;
   }
   .js #menu.active {
     display: block;
-    animation: show-right .3s forwards;
+    animation: show-right 0.3s forwards;
   }
   .js .dropdown-menu {
     position: static;
-    border: none
+    border: none;
   }
 }

@@ -9,8 +9,8 @@ export default function initTabNav() {
       _tabContent.forEach((item) => {
         item.classList.remove("active");
       });
-      const $dataDirection = _tabContent[index].dataset.anima;
-      _tabContent[index].classList.add("active", $dataDirection);
+      const dataDirection = _tabContent[index].dataset.anima;
+      _tabContent[index].classList.add("active", dataDirection);
     }
 
     _tabMenu.forEach((li, i) => {

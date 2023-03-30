@@ -7,6 +7,7 @@ import initToolTip from "./modules/toolTip.js";
 import initMenuDropDown from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import initAnimationNumber from "./modules/animation-numbers.js";
+import initCompanyOperation from "./modules/companyOperation.js";
 
 initTabNav();
 initAccordionList();
@@ -17,3 +18,4 @@ initToolTip();
 initMenuDropDown();
 initMenuMobile();
 initAnimationNumber();
+initCompanyOperation();

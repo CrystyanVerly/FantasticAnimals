@@ -222,6 +222,21 @@ body {
   background: #fb5;
 }
 
+#operation::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #e54;
+  margin-left: 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+#operation.open::after {
+  background: #3f4;
+}
+
 /* copyright - footer */
 
 .copy {

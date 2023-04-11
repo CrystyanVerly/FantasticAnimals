@@ -6,8 +6,8 @@ import initModal from "./modules/modal.js";
 import initToolTip from "./modules/toolTip.js";
 import initMenuDropDown from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menuMobile.js";
-import initAnimationNumber from "./modules/animation-numbers.js";
 import initCompanyOperation from "./modules/companyOperation.js";
+import initFetchAnimals from "./modules/fetchAnimals.js";
 
 initTabNav();
 initAccordionList();
@@ -17,5 +17,5 @@ initModal();
 initToolTip();
 initMenuDropDown();
 initMenuMobile();
-initAnimationNumber();
 initCompanyOperation();
+initFetchAnimals();

@@ -2,16 +2,20 @@ import initAnimationNumber from "./animation-numbers.js";
 
 export default function initFetchAnimals() {
   async function fetchAnimals(url) {
-    const _animalsResponse = await fetch(url);
-    const _animalsJSON = await _animalsResponse.json();
-    const _gridNumbers = document.querySelector(".grid-numbers");
+    try {
+      const _animalsResponse = await fetch(url);
+      const _animalsJSON = await _animalsResponse.json();
+      const _gridNumbers = document.querySelector(".grid-numbers");
 
-    _animalsJSON.forEach((animal) => {
-      const _animalDiv = createAnimals(animal);
+      _animalsJSON.forEach((animal) => {
+        const _animalDiv = createAnimals(animal);
 
-      _gridNumbers.appendChild(_animalDiv);
-    });
-    initAnimationNumber();
+        _gridNumbers.appendChild(_animalDiv);
+      });
+      initAnimationNumber();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   function createAnimals(animal) {

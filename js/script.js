@@ -8,6 +8,7 @@ import initMenuDropDown from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import initCompanyOperation from "./modules/companyOperation.js";
 import initFetchAnimals from "./modules/fetchAnimals.js";
+import initFetchBTC from "./modules/fetchBitCoin.js";
 
 initTabNav();
 initAccordionList();
@@ -19,3 +20,4 @@ initMenuDropDown();
 initMenuMobile();
 initCompanyOperation();
 initFetchAnimals();
+initFetchBTC();

@@ -1,28 +1,34 @@
 export default function initModal() {
-  const _btnModalLogin = document.querySelector("[data-modal='open']");
-  const _btnModalClose = document.querySelector("[data-modal='close']");
-  const _modalContainer = document.querySelector("[data-modal='container']");
+  const btnModalLogin = document.querySelector("[data-modal='open']");
+  const btnModalClose = document.querySelector("[data-modal='close']");
+  const modalContainer = document.querySelector("[data-modal='container']");
 
-  if (_btnModalLogin && _btnModalClose && _modalContainer) {
-    function openModal() {
-      _btnModalLogin.addEventListener("click", function (e) {
-        e.preventDefault();
-        _modalContainer.classList.add("active");
-      });
+  function openModal() {
+    btnModalLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      modalContainer.classList.add("active");
+    });
+  }
+
+  function outClickModal(e) {
+    if (e.target === this) {
+      modalContainer.classList.remove("active");
     }
+  }
+
+  function closeBtnModal() {
+    const outClickModalContainer =
+      document.querySelector(".modal").parentElement;
+
+    btnModalClose.addEventListener("click", (e) => {
+      e.preventDefault();
+      modalContainer.classList.remove("active");
+    });
+    outClickModalContainer.addEventListener("click", outClickModal);
+  }
+
+  if (btnModalLogin && btnModalClose && modalContainer) {
     openModal();
-
-    function closeBtnModal() {
-      const _outClickModal = document.querySelector(".modal").parentElement;
-
-      _btnModalClose.addEventListener("click", function (e) {
-        e.preventDefault();
-        _modalContainer.classList.remove("active");
-      });
-      _outClickModal.addEventListener("click", function (e) {
-        e.target === this ? _modalContainer.classList.remove("active") : null;
-      });
-    }
     closeBtnModal();
   }
 }

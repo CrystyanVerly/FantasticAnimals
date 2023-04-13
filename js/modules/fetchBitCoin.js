@@ -3,13 +3,13 @@ export default function initFetchBTC() {
     fetch("https://blockchain.info/ticker")
       .then((response) => response.json())
       .then((btc) => {
-        const _sellBTC = (1000 / btc.BRL.sell).toFixed(4);
-        const _btcPrice = document.querySelector(".btc-price");
+        const sellBTC = (1000 / btc.BRL.sell).toFixed(4);
+        const btcPrice = document.querySelector(".btc-price");
 
-        _btcPrice.innerText = _sellBTC;
+        btcPrice.innerText = sellBTC;
 
         setInterval(() => {
-          _btcPrice.innerText = _sellBTC;
+          btcPrice.innerText = sellBTC;
         }, 1000 * 30);
       })
       .catch((error) => {

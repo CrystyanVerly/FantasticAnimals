@@ -1,21 +1,21 @@
-export default function outSideClick(element, _events, callback) {
-  const _html = document.documentElement;
-  const _outSide = "data-outside";
-
-  if (!element.hasAttribute(_outSide)) {
-    _events.forEach((eventUser) => {
-      setTimeout(() => _html.addEventListener(eventUser, handleOutSideClick));
-    });
-    element.setAttribute(_outSide, "");
-  }
+export default function outSideClick(element, events, callback) {
+  const html = document.documentElement;
+  const outSide = "data-outside";
 
   function handleOutSideClick(e) {
     if (!element.contains(e.target)) {
-      element.removeAttribute(_outSide);
-      _events.forEach((eventUser) => {
-        _html.removeEventListener(eventUser, handleOutSideClick);
+      element.removeAttribute(outSide);
+      events.forEach((eventUser) => {
+        html.removeEventListener(eventUser, handleOutSideClick);
       });
       callback();
     }
+  }
+
+  if (!element.hasAttribute(outSide)) {
+    events.forEach((eventUser) => {
+      setTimeout(() => html.addEventListener(eventUser, handleOutSideClick));
+    });
+    element.setAttribute(outSide, "");
   }
 }

@@ -1,33 +1,34 @@
 export default function initAnimationNumber() {
   function animaNumbers() {
-    const _numbers = document.querySelectorAll("[data-num]");
+    const numbers = document.querySelectorAll("[data-num]");
 
-    _numbers.forEach((num) => {
-      const _total = +num.innerText;
-      const _increment = Math.floor(_total / 100);
+    numbers.forEach((num) => {
+      const total = +num.innerText;
+      const increment = Math.floor(total / 100);
 
-      let _start = 0;
-      const _timer = setInterval(() => {
-        _start += _increment;
-        num.innerText = _start;
+      let start = 0;
+      const timer = setInterval(() => {
+        start += increment;
+        num.innerText = start;
 
-        if (_start > _total) {
-          num.innerText = _total;
-          clearInterval(_timer);
+        if (start > total) {
+          num.innerText = total;
+          clearInterval(timer);
         }
       }, 25 * Math.random());
     });
   }
 
+  let observer;
   function handleMutation(mutation) {
     if (mutation[0].target.classList.contains("active")) {
-      _observer.disconnect();
+      observer.disconnect();
       animaNumbers();
     }
   }
 
-  const _observer = new MutationObserver(handleMutation);
-  const _observerTarget = document.querySelector(".numbers");
+  observer = new MutationObserver(handleMutation);
+  const observerTarget = document.querySelector(".numbers");
 
-  _observer.observe(_observerTarget, { attributes: true });
+  observer.observe(observerTarget, { attributes: true });
 }

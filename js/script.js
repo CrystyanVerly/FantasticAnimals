@@ -8,7 +8,7 @@ import initMenuDropDown from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import initCompanyOperation from "./modules/companyOperation.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
-import initFetchBTC from "./modules/fetchBitCoin.js";
+import fetchBTC from "./modules/fetchBitCoin.js";
 
 const tabNav = new TabNav(
   "[data-tab='menu'] li",
@@ -39,4 +39,4 @@ initMenuDropDown();
 initMenuMobile();
 initCompanyOperation();
 
-initFetchBTC();
+fetchBTC("https://blockchain.info/ticker", ".btc-price");

@@ -1,10 +1,10 @@
-export default function initFetchBTC() {
+export default function fetchBTC(url, target) {
   function fetchBtc() {
-    fetch("https://blockchain.info/ticker")
+    fetch(url)
       .then((response) => response.json())
       .then((btc) => {
         const sellBTC = (1000 / btc.BRL.sell).toFixed(4);
-        const btcPrice = document.querySelector(".btc-price");
+        const btcPrice = document.querySelector(target);
 
         btcPrice.innerText = sellBTC;
 
@@ -16,5 +16,5 @@ export default function initFetchBTC() {
         console.log(Error(error));
       });
   }
-  fetchBtc();
+  return fetchBtc();
 }

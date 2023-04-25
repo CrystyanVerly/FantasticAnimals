@@ -1,4 +1,4 @@
-import initTabNav from "./modules/tab-navigation.js";
+import TabNav from "./modules/tab-navigation.js";
 import Accordion from "./modules/accordion-list.js";
 import SmoothScroll from "./modules/smooth-scroll.js";
 import initScrollAnimation from "./modules/animation-scroll.js";
@@ -16,7 +16,12 @@ smoothScroll.init();
 const accordion = new Accordion("[data-anima='accordion'] dt");
 accordion.init();
 
-initTabNav();
+const tabNav = new TabNav(
+  "[data-tab='menu'] li",
+  "[data-tab='content'] section"
+);
+tabNav.init();
+
 initScrollAnimation();
 initModal();
 initToolTip();

@@ -7,7 +7,7 @@ import ToolTip from "./modules/toolTip.js";
 import initMenuDropDown from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import initCompanyOperation from "./modules/companyOperation.js";
-import initFetchAnimals from "./modules/fetchAnimals.js";
+import fetchAnimals from "./modules/fetchAnimals.js";
 import initFetchBTC from "./modules/fetchBitCoin.js";
 
 const tabNav = new TabNav(
@@ -32,9 +32,11 @@ modal.init();
 const toolTip = new ToolTip("[data-tooltip]");
 toolTip.init();
 
+fetchAnimals("../../API/amountAnimals.json", ".grid-numbers");
+
 initScrollAnimation();
 initMenuDropDown();
 initMenuMobile();
 initCompanyOperation();
-initFetchAnimals();
+
 initFetchBTC();

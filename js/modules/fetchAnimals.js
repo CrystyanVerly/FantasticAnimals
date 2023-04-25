@@ -1,6 +1,6 @@
 import AnimationNumbers from "./animation-numbers.js";
 
-export default function initFetchAnimals() {
+export default function fetchAnimals(url, target) {
   function createAnimals(animal) {
     const animalNumberContainer = document.createElement("div");
     animalNumberContainer.classList.add("animal-number");
@@ -13,27 +13,33 @@ export default function initFetchAnimals() {
     return animalNumberContainer;
   }
 
-  async function fetchAnimals(url) {
+  const gridNumbers = document.querySelector(target);
+  function fillInAnimals(animal) {
+    const animalDiv = createAnimals(animal);
+    gridNumbers.appendChild(animalDiv);
+  }
+
+  function animaNumbersAnimals() {
+    const animaNumbers = new AnimationNumbers(
+      "[data-num]",
+      ".numbers",
+      "active"
+    );
+    animaNumbers.init();
+  }
+
+  async function pullAnimals() {
     try {
       const animalsResponse = await fetch(url);
       const animalsJSON = await animalsResponse.json();
-      const gridNumbers = document.querySelector(".grid-numbers");
 
-      animalsJSON.forEach((animal) => {
-        const animalDiv = createAnimals(animal);
+      animalsJSON.forEach((animal) => fillInAnimals(animal));
 
-        gridNumbers.appendChild(animalDiv);
-      });
-      const animaNumbers = new AnimationNumbers(
-        "[data-num]",
-        ".numbers",
-        "active"
-      );
-      animaNumbers.init();
+      animaNumbersAnimals();
     } catch (error) {
       console.log(error);
     }
   }
 
-  fetchAnimals("../../API/amountAnimals.json");
+  return pullAnimals();
 }

@@ -1,4 +1,4 @@
-import initAnimationNumber from "./animation-numbers.js";
+import AnimationNumbers from "./animation-numbers.js";
 
 export default function initFetchAnimals() {
   function createAnimals(animal) {
@@ -24,7 +24,12 @@ export default function initFetchAnimals() {
 
         gridNumbers.appendChild(animalDiv);
       });
-      initAnimationNumber();
+      const animaNumbers = new AnimationNumbers(
+        "[data-num]",
+        ".numbers",
+        "active"
+      );
+      animaNumbers.init();
     } catch (error) {
       console.log(error);
     }

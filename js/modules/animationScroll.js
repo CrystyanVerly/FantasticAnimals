@@ -19,8 +19,6 @@ export default class AnimationScroll {
   }
 
   checkDistance() {
-    console.log("teste");
-
     this.distance.forEach((section) => {
       if (window.scrollY > section.offSet) {
         section.element.classList.add("active");

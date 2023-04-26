@@ -8,7 +8,7 @@ import Accordion from "./modules/accordionList.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
 import ToolTip from "./modules/toolTip.js";
 import fetchBTC from "./modules/fetchBitCoin.js";
-import initCompanyOperation from "./modules/companyOperation.js";
+import CompanyOperation from "./modules/companyOperation.js";
 
 const smoothScroll = new SmoothScroll("[data-menu='link'] a[href^='#']");
 smoothScroll.init();
@@ -45,4 +45,5 @@ toolTip.init();
 
 fetchBTC("https://blockchain.info/ticker", ".btc-price");
 
-initCompanyOperation();
+const compOperation = new CompanyOperation("[data-week]");
+compOperation.init();

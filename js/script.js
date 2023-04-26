@@ -1,6 +1,6 @@
 import SmoothScroll from "./modules/smoothScroll.js";
 import AnimationScroll from "./modules/animationScroll.js";
-import initMenuDropDown from "./modules/dropdownMenu.js";
+import MenuDropDown from "./modules/dropDownMenu.js";
 import Modal from "./modules/modal.js";
 import initMenuMobile from "./modules/menuMobile.js";
 import TabNav from "./modules/tabNavigation.js";
@@ -16,7 +16,8 @@ smoothScroll.init();
 const animaScroll = new AnimationScroll("[data-anima='scroll']");
 animaScroll.init();
 
-initMenuDropDown();
+const menuDropDown = new MenuDropDown("[data-dropdown]");
+menuDropDown.init();
 
 const modal = new Modal(
   "[data-modal='open']",

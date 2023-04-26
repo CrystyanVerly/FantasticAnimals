@@ -1,8 +1,8 @@
 import SmoothScroll from "./modules/smoothScroll.js";
 import AnimationScroll from "./modules/animationScroll.js";
-import MenuDropDown from "./modules/dropDownMenu.js";
+import MenuDropDown from "./modules/dropdownMenu.js";
 import Modal from "./modules/modal.js";
-import initMenuMobile from "./modules/menuMobile.js";
+import MenuMobile from "./modules/menuMobile.js";
 import TabNav from "./modules/tabNavigation.js";
 import Accordion from "./modules/accordionList.js";
 import fetchAnimals from "./modules/fetchAnimals.js";
@@ -26,7 +26,8 @@ const modal = new Modal(
 );
 modal.init();
 
-initMenuMobile();
+const menuMBL = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMBL.init();
 
 const tabNav = new TabNav(
   "[data-tab='menu'] li",

@@ -38,7 +38,7 @@ tabNav.init();
 const accordion = new Accordion("[data-anima='accordion'] dt");
 accordion.init();
 
-fetchAnimals("../../API/amountAnimals.json", ".grid-numbers");
+fetchAnimals("./amountAnimals.json", ".grid-numbers");
 
 const toolTip = new ToolTip("[data-tooltip]");
 toolTip.init();

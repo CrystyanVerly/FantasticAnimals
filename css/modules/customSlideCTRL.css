@@ -1,0 +1,35 @@
+.custom-controls {
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+  gap: 0.6rem;
+  bottom: 1rem;
+  position: absolute;
+  top: -4.5rem;
+  opacity: 0.9;
+}
+
+.custom-controls img {
+  will-change: transform;
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin: 5px;
+  transform: scale(1);
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0.9;
+  filter: blur(0.7px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.custom-controls li.active img,
+.custom-controls li.active img:hover {
+  transform: scale(1.125);
+  opacity: 1;
+  filter: blur(0);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 3px 0px,
+    rgba(60, 64, 67, 0.15) 0px 3px 6px 2px;
+}

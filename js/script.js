@@ -9,6 +9,7 @@ import fetchAnimals from "./modules/fetchAnimals.js";
 import ToolTip from "./modules/toolTip.js";
 import fetchBTC from "./modules/fetchBitCoin.js";
 import CompanyOperation from "./modules/companyOperation.js";
+import SlideNav from "./modules/slideNav.js";
 
 const smoothScroll = new SmoothScroll("[data-menu='link'] a[href^='#']");
 smoothScroll.init();
@@ -38,7 +39,7 @@ tabNav.init();
 const accordion = new Accordion("[data-anima='accordion'] dt");
 accordion.init();
 
-fetchAnimals("./amountAnimals.json", ".grid-numbers");
+fetchAnimals("../API/amountAnimals.json", ".grid-numbers");
 
 const toolTip = new ToolTip("[data-tooltip]");
 toolTip.init();
@@ -47,3 +48,9 @@ fetchBTC("https://blockchain.info/ticker", ".btc-price");
 
 const compOperation = new CompanyOperation("[data-week]");
 compOperation.init();
+
+const slide = new SlideNav(".slide-wrapper", ".slide-list");
+slide.init();
+
+slide.addArrow(".prev-slide", ".next-slide");
+slide.addControl(".custom-controls");

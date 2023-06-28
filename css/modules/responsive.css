@@ -24,6 +24,9 @@
   .grid-numbers {
     grid-column: 1;
   }
+  .grid-numbers h1 {
+    font-size: 1.5rem;
+  }
   .faq-list,
   .data,
   .map {
@@ -80,12 +83,19 @@
 }
 
 [data-anima="accordion"] dt::after {
-  content: "⬎";
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url(../.././img/svg/arrow-red.svg) no-repeat center center;
   margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
 }
 
 [data-anima="accordion"] dt.active::after {
-  content: "⬏";
+  content: "";
+  transform: rotate(-90deg);
 }
 
 [data-anima="accordion"] dd.active {

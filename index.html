@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=Playfair+Display+SC:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -45,7 +45,9 @@
           <li><a href="#faq">Faq</a></li>
           <li><a href="#contact">Contato</a></li>
           <li>
-            <a data-modal="open" href="login.html">Login</a>
+            <a data-modal="open" href="login.html"
+              >Login <span class="arrow-black"></span
+            ></a>
           </li>
         </ul>
       </nav>
@@ -270,7 +272,7 @@
     <!-- modal -->
     <section class="modal-container" data-modal="container">
       <div class="modal">
-        <button class="close" data-modal="close">X</button>
+        <button type="button" class="close" data-modal="close"></button>
         <form action="">
           <label for="email">E-mail</label>
           <input type="text" for="email" id="email" />
